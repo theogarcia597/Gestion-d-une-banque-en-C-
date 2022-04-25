@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>256</x>
+      <y>520</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>e-compte
+--
+string email;
+--
+SaisirCompte()
+AfficherCompter()
+ModifierCompte()
+RetraitArgent()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>224</x>
+      <y>312</y>
+      <w>176</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Adresse
+--
+int num_voie;
+string nom_voie;
+string complement_d_adresse
+string ville;
+int code_postal;
+--
+SaisirAdresse
+AfficherAdresse
+ModifierAdresse</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>520</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>CompteBloque
+--
+double interet
+int duree
+--
+SaisirCompte()
+AfficherCompter()
+ModifierCompte()
+RetraitArgent()
+Virement()
+AfficherTempsRestant()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>168</y>
+      <w>168</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>CompteEpargne
+--
+double interet
+--
+SaisirCompte()
+AfficherCompter()
+ModifierCompte()
+Calculinteret()
+AjouterInteret()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>464</x>
+      <y>520</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>PEL
+--
+double retrait_mensuel
+double taux_d_emprunt
+--
+SaisirCompte()
+AfficherCompter()
+ModifierCompte()
+Virement()
+AfficherRetrait()
+ModifierRetrait()
+AfficherTauxDEmprunt()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>296</y>
+      <w>168</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Compte
+--
+int num_id;
+double solde;
+--
+AfficherTitulaire
+AfficherCompte
+RentraitArgent
+RetraitArgent
+Virement
+DateOuverture
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>328</y>
+      <w>168</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>CompteCourant
+--
+double agio
+double decouvert
+double operations[10]
+double argent_depenser
+--
+SaisirCompte()
+ModifierCompte()
+CalculAgio()
+RetraitArgent()
+EnregistrerOperation()
+AfficherOperations()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>384</y>
+      <w>96</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>264</y>
+      <w>96</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>344</x>
+      <y>456</y>
+      <w>112</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>456</y>
+      <w>96</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>512</x>
+      <y>456</y>
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>152</y>
+      <w>168</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Banques
+--
+string nom
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>224</x>
+      <y>104</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Titulaire
+--
+string nom
+string prenom
+int phone
+--
+SaisirTitulaire
+AfficherTitulaire
+ModifierTitulaire</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>248</y>
+      <w>40</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>176</y>
+      <w>24</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>224</y>
+      <w>104</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>110.0;90.0;110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>248</y>
+      <w>104</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;110.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>80</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Date
+--
+int aa
+int mm
+int jj
+--
+SaisirDate
+AfficherDate</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>144</x>
+      <y>200</y>
+      <w>96</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+1..50</panel_attributes>
+    <additional_attributes>10.0;140.0;60.0;200.0;100.0;10.0</additional_attributes>
+  </element>
+</diagram>
